@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>管理後台 | 正能量發射站</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+</head>
+<body>
+  <!-- 密碼保護畫面 -->
+  <div id="password-gate" style="position:fixed;inset:0;background:#fafafa;z-index:9999;display:flex;align-items:center;justify-content:center;">
+    <div style="background:#fff;padding:40px;border-radius:16px;box-shadow:0 4px 30px rgba(0,0,0,0.1);text-align:center;max-width:360px;width:90%;">
+      <img src="images/logo.jpg" alt="Logo" style="width:80px;height:80px;border-radius:12px;margin-bottom:16px;">
+      <h2 style="color:#6b4c9a;margin-bottom:8px;">正能量發射站</h2>
+      <p style="color:#888;margin-bottom:24px;font-size:0.9rem;">管理後台 · 請輸入密碼</p>
+      <input type="password" id="site-password" placeholder="請輸入密碼" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;margin-bottom:16px;font-size:1rem;">
+      <button onclick="checkPassword()" style="width:100%;background:#6b4c9a;color:#fff;border:none;padding:12px;border-radius:8px;font-size:1rem;cursor:pointer;">進入後台</button>
+      <p id="pwd-error" style="color:#d93025;font-size:0.85rem;margin-top:12px;display:none;">密碼錯誤，請再試一次</p>
+    </div>
+  </div>
+
+  <header style="display:none;" id="main-header">
+    <div class="container">
+      <h1 class="logo">
+        <img src="images/logo.jpg" alt="Logo" class="logo-img">
+        正能量發射站
+        <span style="font-size:0.7rem; color:#888; display:block; margin-top:2px;">Energy Heaven</span>
+      </h1>
+      <nav>
+        <a href="index.html">返回首頁</a>
+        <a href="admin.html" class="admin-link">管理後台</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="admin-container">
+    <div class="admin-form">
+      <h2>新增 / 編輯商品</h2>
+      <form id="product-form">
+        <div class="form-group">
+          <label>商品名稱 *</label>
+          <input type="text" name="name" required placeholder="例如：紫水晶簇">
+        </div>
+        <div class="form-group">
+          <label>描述</label>
+          <textarea name="description" placeholder="商品介紹與能量說明"></textarea>
+        </div>
+        <div class="form-group">
+          <label>價格 (HK$) *</label>
+          <input type="number" name="price" required min="0" step="1" placeholder="680">
+        </div>
+        <div class="form-group">
+          <label>圖片路徑</label>
+          <input type="text" name="image" placeholder="images/xxx.jpg 或完整網址">
+          <small style="color:#888;">可使用本地圖片路徑，或貼上圖片網址</small>
+        </div>
+        <div class="form-group">
+          <label>分類</label>
+          <input type="text" name="category" placeholder="例如：療癒水晶、愛情水晶">
+        </div>
+        <button type="submit" class="btn-submit">新增商品</button>
+      </form>
+    </div>
+
+    <div class="admin-list">
+      <h2>現有商品</h2>
+      <div id="admin-product-list"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 正能量發射站 · Energy Heaven · 管理後台</p>
+      <p class="note">所有資料僅儲存在你的瀏覽器本地，不會上傳到伺服器。</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
