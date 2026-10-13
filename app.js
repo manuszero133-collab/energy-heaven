@@ -111,7 +111,7 @@ function addOrUpdateProduct(e) {
     name: form.name.value.trim(),
     description: form.description.value.trim(),
     price: Number(form.price.value),
-    image: form.image.value.trim() || 'images/logo.jpg',
+    image: form.image.value.trim() || 'logo.jpg',
     category: form.category.value.trim() || '水晶'
   };
 
