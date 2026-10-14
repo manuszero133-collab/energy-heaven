@@ -10,10 +10,8 @@
 </head>
 <body>
   <!-- 密碼保護畫面 -->
-  <div id="password-gate" style="position:fixed;inset:0;background:url('logo.jpg') center/cover no-repeat #fafafa;z-index:9999;display:flex;align-items:center;justify-content:center;">
+  <div id="password-gate" style="position:fixed;inset:0;background:url('logo.jpg') center/contain no-repeat #fafafa;z-index:9999;display:flex;align-items:flex-end;justify-content:center;padding-bottom:12vh;">
     <div style="text-align:center;max-width:360px;width:90%;">
-      <h2 style="color:#6b4c9a;margin-bottom:8px;font-size:1.8rem;text-shadow:0 1px 3px rgba(255,255,255,0.9);">正能量發射站</h2>
-      <p style="color:#444;margin-bottom:32px;font-size:1.05rem;text-shadow:0 1px 2px rgba(255,255,255,0.7);">Energy Heaven</p>
       <input type="password" id="site-password" placeholder="請輸入密碼" style="width:100%;padding:14px;border:1px solid #ccc;border-radius:10px;margin-bottom:16px;font-size:1rem;background:rgba(255,255,255,0.95);">
       <button onclick="checkPassword()" style="width:100%;background:#6b4c9a;color:#fff;border:none;padding:14px;border-radius:10px;font-size:1rem;cursor:pointer;font-weight:500;">進入網站</button>
       <p id="pwd-error" style="color:#d93025;font-size:0.85rem;margin-top:14px;display:none;">密碼錯誤，請再試一次</p>
