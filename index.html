@@ -20,36 +20,55 @@
   </div>
 
   <header style="display:none;" id="main-header">
-    <div class="container">
-      <h1 class="logo">
-        <img src="images/logo.jpg" alt="Logo" class="logo-img">
-        正能量發射站
-        <span style="font-size:0.7rem; color:#888; display:block; margin-top:2px;">Energy Heaven</span>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:12px 20px;">
+      <h1 class="logo" style="display:flex;align-items:center;gap:10px;margin:0;">
+        <img src="logo.jpg" alt="Logo" style="height:48px;width:auto;">
+        <span>正能量發射站<br><small style="font-size:0.65rem;color:#888;font-weight:normal;">Energy Heaven</small></span>
       </h1>
       <nav>
-        <a href="index.html">首頁</a>
-        <a href="#products">商品</a>
         <a href="admin.html" class="admin-link">管理後台</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h2>正能量發射 · 療癒心靈</h2>
-      <p>精選高品質水晶，為你的生活帶來正能量與平靜。</p>
-      <a href="#products" class="btn">探索商品</a>
-    </div>
-  </section>
+  <div id="main-content" style="display:none;">
+    <div style="display:flex;min-height:calc(100vh - 70px);">
+      <!-- 左側選單 -->
+      <aside style="width:180px;background:#f8f6fb;border-right:1px solid #eee;padding:24px 0;flex-shrink:0;">
+        <nav style="display:flex;flex-direction:column;gap:4px;">
+          <a href="#bracelets" style="padding:10px 20px;color:#333;text-decoration:none;display:block;">手鏈</a>
+          <a href="#necklaces" style="padding:10px 20px;color:#333;text-decoration:none;display:block;">頸鏈</a>
+          <a href="#custom" style="padding:10px 20px;color:#333;text-decoration:none;display:block;">自家設計</a>
+          <a href="#pillars" style="padding:10px 20px;color:#333;text-decoration:none;display:block;">水晶柱</a>
+          <a href="#clusters" style="padding:10px 20px;color:#333;text-decoration:none;display:block;">水晶晶簇</a>
+          <a href="#cleansing" style="padding:10px 20px;color:#333;text-decoration:none;display:block;">淨化</a>
+          <a href="#story" style="padding:10px 20px;color:#333;text-decoration:none;display:block;">品牌故事</a>
+          <a href="#partners" style="padding:10px 20px;color:#333;text-decoration:none;display:block;">合作方</a>
+          <a href="#contact" style="padding:10px 20px;color:#333;text-decoration:none;display:block;">聯絡我們</a>
+        </nav>
+      </aside>
 
-  <section id="products" class="products-section">
-    <div class="container">
-      <h2 class="section-title">精選水晶</h2>
-      <div id="product-grid" class="product-grid">
-        <!-- 產品將由 JS 動態載入 -->
-      </div>
+      <!-- 主要內容 -->
+      <main style="flex:1;padding:20px;">
+        <section class="hero">
+          <div class="hero-content">
+            <h2>正能量發射 · 療癒心靈</h2>
+            <p>精選高品質水晶，為你的生活帶來正能量與平靜。</p>
+            <a href="#products" class="btn">探索商品</a>
+          </div>
+        </section>
+
+        <section id="products" class="products-section">
+          <div class="container">
+            <h2 class="section-title">精選水晶</h2>
+            <div id="product-grid" class="product-grid">
+              <!-- 產品將由 JS 動態載入 -->
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
-  </section>
+  </div>
 
   <footer>
     <div class="container">

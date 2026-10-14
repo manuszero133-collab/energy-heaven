@@ -166,10 +166,8 @@ function checkPassword() {
   if (input === SITE_PASSWORD) {
     sessionStorage.setItem('authenticated', 'true');
     document.getElementById('password-gate').style.display = 'none';
-    document.getElementById('main-header').style.display = '';
-    document.querySelector('.hero').style.display = '';
-    document.querySelector('.products-section').style.display = '';
-    document.querySelector('footer').style.display = '';
+    document.getElementById('main-header').style.display = 'block';
+    document.getElementById('main-content').style.display = 'block';
   } else {
     document.getElementById('pwd-error').style.display = 'block';
   }
@@ -179,17 +177,10 @@ function checkPassword() {
 document.addEventListener('DOMContentLoaded', () => {
   if (sessionStorage.getItem('authenticated') === 'true') {
     document.getElementById('password-gate').style.display = 'none';
-    document.getElementById('main-header').style.display = '';
-    document.querySelector('.hero').style.display = '';
-    document.querySelector('.products-section').style.display = '';
-    document.querySelector('footer').style.display = '';
-  } else {
-    document.querySelector('.hero').style.display = 'none';
-    document.querySelector('.products-section').style.display = 'none';
-    document.querySelector('footer').style.display = 'none';
+    document.getElementById('main-header').style.display = 'block';
+    document.getElementById('main-content').style.display = 'block';
   }
 
-  // 原本的初始化
   renderProducts();
   renderAdminList();
 
