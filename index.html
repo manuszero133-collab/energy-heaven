@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>正能量發射站 | Energy Heaven</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="logo.jpg" type="image/jpeg">
+</head>
+<body>
+  <!-- 密碼保護畫面 -->
+  <div id="password-gate" style="position:fixed;inset:0;background:#fafafa;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;gap:24px;">
+    <img src="logo.jpg" alt="正能量發射站" style="width:580px;max-width:95%;height:auto;filter:contrast(1.1) saturate(1.05);">
+    <div style="text-align:center;max-width:300px;width:100%;">
+      <input type="password" id="site-password" placeholder="請輸入密碼" style="width:100%;padding:12px;border:1px solid #ccc;border-radius:10px;margin-bottom:12px;font-size:1rem;background:rgba(255,255,255,0.95);">
+      <button onclick="checkPassword()" style="width:100%;background:#6b4c9a;color:#fff;border:none;padding:12px;border-radius:10px;font-size:1rem;cursor:pointer;font-weight:500;">進入網站</button>
+      <p id="pwd-error" style="color:#d93025;font-size:0.85rem;margin-top:10px;display:none;">密碼錯誤，請再試一次</p>
+    </div>
+  </div>
+
+  <header style="display:none;" id="main-header">
+    <div class="container">
+      <h1 class="logo">
+        <img src="images/logo.jpg" alt="Logo" class="logo-img">
+        正能量發射站
+        <span style="font-size:0.7rem; color:#888; display:block; margin-top:2px;">Energy Heaven</span>
+      </h1>
+      <nav>
+        <a href="index.html">首頁</a>
+        <a href="#products">商品</a>
+        <a href="admin.html" class="admin-link">管理後台</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>正能量發射 · 療癒心靈</h2>
+      <p>精選高品質水晶，為你的生活帶來正能量與平靜。</p>
+      <a href="#products" class="btn">探索商品</a>
+    </div>
+  </section>
+
+  <section id="products" class="products-section">
+    <div class="container">
+      <h2 class="section-title">精選水晶</h2>
+      <div id="product-grid" class="product-grid">
+        <!-- 產品將由 JS 動態載入 -->
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 正能量發射站 · Energy Heaven · 私人展示</p>
+      <p class="note">此頁面僅供內部使用，商品資料儲存於瀏覽器本地。</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
